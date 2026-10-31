@@ -1,11 +1,13 @@
 # AGENTS.md
 
 ## Tech Stack
+
 - Vite (Vanilla JavaScript)
 - HTML
 - CSS
 
 ## Coding Guidelines
+
 - Use semantic HTML first.
 - Every input must have a visible label.
 - Use mobile-first CSS with min-width media queries.
