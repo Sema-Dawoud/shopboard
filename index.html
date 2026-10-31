@@ -31,23 +31,36 @@
         <h2>Featured Products</h2>
         <p>Explore our collection.</p>
 
-        <label for="search-input">Search Products</label>
-        <input type="text" id="search-input" placeholder="Search products..." />
-        <label for="category-filter">Filter by Category</label>
+        <div class="product-controls">
+          <div class="control-group">
+            <label for="search-input">Search Products</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search products..."
+            />
+          </div>
 
-        <select id="category-filter">
-          <option value="all">All Categories</option>
-          <option value="Bags">Bags</option>
-          <option value="Shoes">Shoes</option>
-          <option value="Accessories">Accessories</option>
-        </select>
-        <label for="sort-select">Sort by Price</label>
+          <div class="control-group">
+            <label for="category-filter">Filter by Category</label>
+            <select id="category-filter">
+              <option value="all">All Categories</option>
+              <option value="Bags">Bags</option>
+              <option value="Shoes">Shoes</option>
+              <option value="Accessories">Accessories</option>
+            </select>
+          </div>
 
-        <select id="sort-select">
-          <option value="default">Default Order</option>
-          <option value="low-high">Price: Low to High</option>
-          <option value="high-low">Price: High to Low</option>
-        </select>
+          <div class="control-group">
+            <label for="sort-select">Sort by Price</label>
+            <select id="sort-select">
+              <option value="default">Default Order</option>
+              <option value="low-high">Price: Low to High</option>
+              <option value="high-low">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
         <div class="product-grid" id="products-container"></div>
       </section>
 
