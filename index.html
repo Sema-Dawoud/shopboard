@@ -1,13 +1,109 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>shopboard</title>
+    <meta name="description" content="Discover products at ShopBoard." />
+    <title>ShopBoard</title>
   </head>
+
   <body>
-    <div id="app"></div>
+    <header class="site-header">
+      <a class="logo" href="#home">ShopBoard</a>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#register">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <p class="eyebrow">WELCOME TO SHOPBOARD</p>
+        <h1>Find Your Next Favorite Thing</h1>
+        <p>Discover useful products for your everyday life.</p>
+        <a class="button" href="#products">Explore Products</a>
+      </section>
+
+      <section class="section-container" id="products">
+        <h2>Featured Products</h2>
+        <p>Explore our collection.</p>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-icon" aria-hidden="true">🎧</div>
+            <h3>Wireless Headphones</h3>
+            <p>Enjoy your favorite music anywhere.</p>
+            <p class="price">$49.99</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-icon" aria-hidden="true">⌚</div>
+            <h3>Smart Watch</h3>
+            <p>Keep your day organized.</p>
+            <p class="price">$79.99</p>
+          </article>
+
+          <article class="product-card">
+            <div class="product-icon" aria-hidden="true">🎒</div>
+            <h3>Everyday Backpack</h3>
+            <p>A practical choice for work and travel.</p>
+            <p class="price">$34.99</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="register section-container" id="register">
+        <h2>Create Your Account</h2>
+        <p>Join the ShopBoard community.</p>
+
+        <form class="register-form">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              autocomplete="name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            />
+            <small>Use at least 8 characters.</small>
+          </div>
+
+          <button class="button" type="submit">Register</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 ShopBoard. All rights reserved.</p>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
