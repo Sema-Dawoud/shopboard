@@ -3,86 +3,369 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Discover products at ShopBoard." />
-    <title>ShopBoard</title>
+    <meta
+      name="description"
+      content="Discover thoughtful skincare, makeup and haircare at ShopBoard Beauty."
+    />
+    <meta name="theme-color" content="#f8f5f3" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/shopboard_assets/tulip-logo.svg"
+    />
+    <title>ShopBoard Beauty — Your everyday beauty edit</title>
   </head>
 
   <body>
-    <header class="site-header">
-      <a class="logo" href="#home">ShopBoard</a>
+    <div class="announcement-bar">
+      <p>A little more care in every day.</p>
+    </div>
 
-      <nav aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
-        <a href="#register">Register</a>
+    <header class="site-header">
+      <a class="logo" href="#home" aria-label="ShopBoard Beauty home">
+        <img
+          src="/shopboard_assets/tulip-logo.svg"
+          alt=""
+          width="39"
+          height="47"
+        />
+        <span class="logo-wordmark">ShopBoard<span>beauty</span></span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#full-collection">Shop All</a>
+        <a href="#favorites">Featured</a>
+        <a href="#categories">Categories</a>
+        <a href="#our-approach">Our approach</a>
+        <a href="#register">Account</a>
       </nav>
+
+      <div class="product-search control-group header-search">
+        <label for="search-input">Search products</label>
+        <div class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.8" cy="10.8" r="6.8"></circle>
+            <path d="m16 16 4.5 4.5"></path>
+          </svg>
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search products..."
+          />
+        </div>
+      </div>
+
+      <div class="header-actions" aria-label="Shop actions">
+        <a
+          class="icon-link cart-link"
+          href="#cart"
+          aria-label="Shopping bag, items: 0"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 8h14l1 13H4L5 8Z"></path>
+            <path d="M9 9V6a3 3 0 0 1 6 0v3"></path>
+          </svg>
+          <span class="cart-count" id="cart-count">0</span>
+        </a>
+        <a class="icon-link" href="#register" aria-label="Your account">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5"></circle>
+            <path d="M4.8 21a7.2 7.2 0 0 1 14.4 0"></path>
+          </svg>
+        </a>
+      </div>
     </header>
 
     <main>
-      <section class="hero" id="home">
-        <p class="eyebrow">WELCOME TO SHOPBOARD</p>
-        <h1>Find Your Next Favorite Thing</h1>
-        <p>Discover useful products for your everyday life.</p>
-        <a class="button" href="#products">Explore Products</a>
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">SKINCARE, MAKEUP & LITTLE RITUALS</p>
+          <h1 id="hero-title">
+            Thoughtful care.<br />Beautiful <em>every day.</em>
+          </h1>
+          <p class="hero-description">
+            Considered skincare, makeup and haircare for your everyday rituals.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#full-collection"
+              >Shop the collection</a
+            >
+            <a class="text-link" href="#categories"
+              >Explore categories <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div
+            class="hero-values"
+            aria-label="Shop skincare, makeup and haircare"
+          >
+            <a href="#categories">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 4C11 4 5 7 5 14c0 3 2 5 5 5 7 0 10-6 10-15Z" />
+                <path d="M3 21c3-5 7-8 13-11" />
+              </svg>
+              <span>Skincare</span>
+            </a>
+            <a href="#categories">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 3h8v4H8zM9 7v13h6V7M11 11h2" />
+                <path d="M7 20h10" />
+              </svg>
+              <span>Makeup</span>
+            </a>
+            <a href="#categories">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3c-3 4-6 7-6 11a6 6 0 0 0 12 0c0-4-3-7-6-11Z" />
+                <path d="M9 15c0 2 1 3 3 3" />
+              </svg>
+              <span>Haircare</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="hero-image"
+            src="./src/assets/beauty/skincare-hero.jpg"
+            alt="A gentle facial cleanser and hydrating serum arranged in warm natural light"
+            fetchpriority="high"
+          />
+          <div class="hero-image-index" aria-label="ShopBoard Beauty">
+            SHOPBOARD<br />BEAUTY
+          </div>
+        </div>
       </section>
 
-      <section class="section-container" id="products">
-        <h2>Featured Products</h2>
-        <p>Explore our collection.</p>
+      <div class="storefront-content">
+        <section
+          class="approach-section"
+          id="our-approach"
+          aria-label="ShopBoard at a glance"
+        >
+          <article class="approach-benefit">
+            <span class="benefit-mark" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path d="M4 8h16l1 12H3L4 8Z" />
+                <path d="M8 9V6a4 4 0 0 1 8 0v3" />
+                <path d="m8 14 2.5 2.5L16 11" /></svg
+            ></span>
+            <h2>A thoughtful edit</h2>
+            <p>Skincare, makeup and haircare in one place.</p>
+          </article>
+          <article class="approach-benefit">
+            <span class="benefit-mark" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 3v3M12 18v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"
+                />
+                <circle cx="12" cy="12" r="5" /></svg
+            ></span>
+            <h2>Easy to explore</h2>
+            <p>Search and filter the local collection.</p>
+          </article>
+          <article class="approach-benefit">
+            <span class="benefit-mark" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <path d="M5 8h14l1 13H4L5 8Z" />
+                <path d="M9 9V6a3 3 0 0 1 6 0v3" />
+                <path d="M8 14h8" /></svg
+            ></span>
+            <h2>Your bag, saved</h2>
+            <p>Cart items stay on this device.</p>
+          </article>
+          <article class="approach-benefit">
+            <span class="benefit-mark" aria-hidden="true"
+              ><svg viewBox="0 0 24 24">
+                <circle cx="12" cy="8" r="3.5" />
+                <path d="M4.8 21a7.2 7.2 0 0 1 14.4 0" /></svg
+            ></span>
+            <h2>Account preview</h2>
+            <p>Try the client-side registration form.</p>
+          </article>
+        </section>
 
-        <div class="product-controls">
-          <div class="control-group">
-            <label for="search-input">Search Products</label>
-            <input
-              type="text"
-              id="search-input"
-              placeholder="Search products..."
+        <section
+          class="favorites-section page-section"
+          id="favorites"
+          aria-labelledby="products-title"
+        >
+          <div class="section-heading products-heading">
+            <div>
+              <p class="eyebrow">THE EVERYDAY EDIT</p>
+              <h2 id="products-title">Shop Our Favorites</h2>
+            </div>
+            <a class="text-link" href="#full-collection"
+              >View all products <span aria-hidden="true">›</span></a
+            >
+          </div>
+          <div
+            class="product-grid featured-grid"
+            id="featured-products-container"
+          ></div>
+        </section>
+
+        <section class="editorial-panel" aria-label="A note from ShopBoard">
+          <div class="editorial-copy">
+            <p class="eyebrow">THE SHOPBOARD CIRCLE</p>
+            <h2>Make yourself at home.</h2>
+            <p>
+              Create a ShopBoard account to gather your everyday beauty
+              favourites. Account services are not connected in this preview.
+            </p>
+            <a class="button button-primary" href="#register"
+              >Create an account</a
+            >
+          </div>
+          <div class="editorial-image">
+            <img
+              src="./src/assets/beauty/skincare-duo.jpg"
+              alt="ShopBoard skincare essentials arranged on a stone surface"
+              loading="lazy"
             />
           </div>
+          <blockquote>
+            <span aria-hidden="true">“</span>
+            <p>Care for your skin.<br />Make room for you.</p>
+            <cite>A NOTE FROM SHOPBOARD</cite>
+          </blockquote>
+        </section>
 
+        <section class="values-strip" aria-label="ShopBoard beauty collection">
+          <p>Good for you.<br />Good for your everyday.</p>
+          <span><b aria-hidden="true">✿</b>Skincare</span>
+          <span><b aria-hidden="true">◉</b>Makeup</span>
+          <span><b aria-hidden="true">⌁</b>Haircare</span>
+          <span><b aria-hidden="true">♡</b>Bag saved locally</span>
+        </section>
+      </div>
+
+      <section
+        class="category-section page-section"
+        id="categories"
+        aria-labelledby="categories-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FIND YOUR FEEL-GOOD</p>
+            <h2 id="categories-title">A good place to begin.</h2>
+          </div>
+          <p>Little rituals, thoughtfully gathered for your everyday.</p>
+        </div>
+
+        <div class="category-grid" id="category-grid">
+          <button
+            class="category-card category-skincare"
+            type="button"
+            data-category="Skincare"
+            aria-pressed="false"
+          >
+            <img
+              src="./src/assets/beauty/skincare-duo.jpg"
+              alt="Skincare oils and creams on a stone counter"
+              loading="lazy"
+            />
+            <span class="category-card-copy"
+              ><span>01 / CARE</span><strong>Skincare</strong
+              ><span class="category-arrow" aria-hidden="true">↗</span></span
+            >
+          </button>
+          <button
+            class="category-card category-makeup"
+            type="button"
+            data-category="Makeup"
+            aria-pressed="false"
+          >
+            <img
+              src="./src/assets/beauty/makeup-palette.jpg"
+              alt="A curated display of neutral makeup palettes"
+              loading="lazy"
+            />
+            <span class="category-card-copy"
+              ><span>02 / COLOR</span><strong>Makeup</strong
+              ><span class="category-arrow" aria-hidden="true">↗</span></span
+            >
+          </button>
+          <button
+            class="category-card category-haircare"
+            type="button"
+            data-category="Haircare"
+            aria-pressed="false"
+          >
+            <img
+              src="./src/assets/beauty/haircare.jpg"
+              alt="Moisturizing shampoo and conditioner on a warm tiled shelf"
+              loading="lazy"
+            />
+            <span class="category-card-copy"
+              ><span>03 / RESTORE</span><strong>Haircare</strong
+              ><span class="category-arrow" aria-hidden="true">↗</span></span
+            >
+          </button>
+        </div>
+      </section>
+
+      <section
+        class="products-section page-section"
+        id="full-collection"
+        aria-labelledby="collection-title"
+      >
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE FULL COLLECTION</p>
+            <h2 id="collection-title">Find your everyday essential.</h2>
+          </div>
+          <p>Search, filter or browse at your own pace.</p>
+        </div>
+        <div class="product-toolbar">
           <div class="control-group">
-            <label for="category-filter">Filter by Category</label>
+            <label for="category-filter">Category</label>
             <select id="category-filter">
-              <option value="all">All Categories</option>
-              <option value="Bags">Bags</option>
-              <option value="Shoes">Shoes</option>
-              <option value="Accessories">Accessories</option>
+              <option value="all">All categories</option>
+              <option value="Skincare">Skincare</option>
+              <option value="Makeup">Makeup</option>
+              <option value="Haircare">Haircare</option>
             </select>
           </div>
-
           <div class="control-group">
-            <label for="sort-select">Sort by Price</label>
+            <label for="sort-select">Sort by</label>
             <select id="sort-select">
-              <option value="default">Default Order</option>
-              <option value="low-high">Price: Low to High</option>
-              <option value="high-low">Price: High to Low</option>
+              <option value="default">Featured</option>
+              <option value="low-high">Price: low to high</option>
+              <option value="high-low">Price: high to low</option>
             </select>
           </div>
+          <button class="clear-filters" id="clear-filters" type="button">
+            Clear filters
+          </button>
         </div>
-
-        <div class="product-grid" id="products-container"></div>
+        <div class="product-lists">
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+          <div class="product-grid" id="products-container"></div>
+        </div>
       </section>
 
-      <section class="section-container" id="cart">
-        <h2>Shopping Cart</h2>
-
-        <div id="cart-container">
-          <p>Your cart is empty.</p>
+      <section
+        class="account-section page-section"
+        id="register"
+        aria-labelledby="register-title"
+      >
+        <div class="account-copy">
+          <p class="eyebrow">A LITTLE SPACE OF YOUR OWN</p>
+          <h2 id="register-title">Make yourself at home.</h2>
+          <p>
+            Create a ShopBoard account to start gathering your everyday beauty
+            favourites. Account services are not connected in this preview.
+          </p>
         </div>
-
-        <p>Total: <span id="cart-total">$0</span></p>
-
-        <button id="clear-cart" type="button">Clear Cart</button>
-      </section>
-
-      <section class="register section-container" id="register">
-        <h2>Create Your Account</h2>
-        <p>Join the ShopBoard community.</p>
-
+        <div class="account-image" aria-hidden="true">
+          <img
+            src="./src/assets/beauty/skincare-duo.jpg"
+            alt=""
+            loading="lazy"
+          />
+        </div>
         <form class="register-form">
           <div class="form-group">
-            <label for="full-name">Full Name</label>
+            <label for="full-name">Full name</label>
             <input
               type="text"
               id="full-name"
@@ -91,9 +374,8 @@
               required
             />
           </div>
-
           <div class="form-group">
-            <label for="email">Email Address</label>
+            <label for="email">Email address</label>
             <input
               type="email"
               id="email"
@@ -102,7 +384,6 @@
               required
             />
           </div>
-
           <div class="form-group">
             <label for="password">Password</label>
             <input
@@ -115,16 +396,92 @@
             />
             <small>Use at least 8 characters.</small>
           </div>
-
-          <button class="button" type="submit">Register</button>
+          <button class="button button-primary" type="submit">
+            Create account
+          </button>
+          <p
+            class="form-status"
+            id="account-status"
+            role="status"
+            aria-live="polite"
+          ></p>
         </form>
+      </section>
+
+      <section class="cart-section" id="cart" aria-labelledby="cart-title">
+        <div class="cart-inner">
+          <div class="cart-heading">
+            <div>
+              <p class="eyebrow">YOUR LITTLE COLLECTION</p>
+              <h2 id="cart-title">
+                Shopping bag <span id="cart-heading-count">(0)</span>
+              </h2>
+            </div>
+            <a class="text-link" href="#favorites"
+              >Continue shopping <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div id="cart-container" aria-live="polite">
+            <p class="empty-cart">Your bag is waiting for something lovely.</p>
+          </div>
+          <div class="cart-summary">
+            <p>Subtotal <strong id="cart-total">$0</strong></p>
+            <button
+              class="button button-secondary"
+              id="clear-cart"
+              type="button"
+            >
+              Clear bag
+            </button>
+          </div>
+          <p class="cart-note">
+            Your bag stays saved on this device for your next visit.
+          </p>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>&copy; 2026 ShopBoard. All rights reserved.</p>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a
+            class="logo footer-logo"
+            href="#home"
+            aria-label="ShopBoard Beauty home"
+          >
+            <img
+              src="/shopboard_assets/tulip-logo.svg"
+              alt=""
+              width="39"
+              height="47"
+            />
+            <span class="logo-wordmark">ShopBoard<span>beauty</span></span>
+          </a>
+          <p>A thoughtful beauty edit for the rituals that make a day yours.</p>
+        </div>
+        <div class="footer-links">
+          <h2>Explore</h2>
+          <a href="#categories">Categories</a
+          ><a href="#favorites">The beauty edit</a
+          ><a href="#our-approach">Our approach</a>
+        </div>
+        <div class="footer-links">
+          <h2>Your ShopBoard</h2>
+          <a href="#register">Create an account</a
+          ><a href="#cart">Shopping bag</a
+          ><a href="#search-input">Find a product</a>
+        </div>
+        <div class="footer-note">
+          <span>TAKE A MOMENT</span>
+          <p>Care for your skin.<br />Make room for you.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 ShopBoard Beauty</span
+        ><span>Made for your everyday.</span>
+      </div>
     </footer>
 
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
